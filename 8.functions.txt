@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Enter the word to capitalize</label>
+        <input type="text" id="capital">
+        <input type="button" value="Convert" onclick="capistr()"><br><br>
+        <label>Enter the position to insert</label>
+        <input type="text" id="index">
+        <label>Enter the text to insert</label>
+        <input type="text" id="ipt">
+        <input type="button" value="Insert" onclick="instr()"><br><br>
+        <label>Enter the text to check</label>
+        <input type="text" id="ipt1">
+        <input type="button" value="Check" onclick="checkipt()"><br><br>
+        <label>Enter the text to split</label>
+        <input type="text" id="splitt">
+        <input type="button" value="Check" onclick="splitxt()"><br><br>
+    </form>
+    <script>
+        function capistr()
+        {
+            let s = document.getElementById("capital").value;
+            
+            s=s[0].toUpperCase()+s.substring(1);
+            document.write(s);
+        }
+        function instr()
+        {
+            let index=Number(document.getElementById("index").value);
+            let t=document.getElementById("ipt").value;
+            let str1="NICE";
+            let str=str1.slice(0,index)+t+str1.slice(index);
+            document.write(str);
+            
+        }
+        function checkipt()
+        {
+            let str1=document.getElementById("ipt1").value;
+            if(typeof str1=="string" || str1 instanceof String)
+            alert('true');
+            else
+            alert("false");
+        }
+        function splitxt()
+        {
+            let str1=document.getElementById("splitt").value;
+            var a=str1.split(" ");
+            document.write(a);
+        }
+    </script>
+</body>
+</html>

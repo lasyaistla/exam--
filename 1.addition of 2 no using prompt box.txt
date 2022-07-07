@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Addition of two Numbers using Prompt Box</h2>
+    <button onclick="addfunc()">Addition of Two Numbers</button>
+    <script>
+        function addfunc() {
+            let num1 = prompt("Enter First Number");
+            let num2 = prompt("Enter Second Number");
+            num1 = Number(num1);
+            num2 = Number(num2);
+            let res = num1 + num2;
+            alert("Sum of " + num1 + " and " + num2 + " is " + res);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceasar Cipher</title>
+</head>
+<body>
+    <form>
+        <label>Enter the text</label>
+        <input type="text" id="input"><br><br>
+        <input type="button" value="Enter" onclick="encryption()">
+    </form>
+    <script>
+        function encryption()
+         {
+            let arr = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+            var key = prompt("Enter Key : ")
+            key = parseInt(key)
+            let arr2=[]
+            for(let i = 0;i<26;i++)
+            {
+                arr2[(i+key)%26]=arr[i]
+            }
+            //alert(arr2)
+
+
+
+
+             let text = document.getElementById("input").value;
+             //let text = t.split("")
+             //alert(text)
+             let res=[]
+             for(let i=0;i<text.length;i++)
+             {
+                let p = text.charCodeAt(i)
+                res[i] = arr2[p - 97]
+             }
+             //alert(res)
+        //     let a=[];
+        //     let j=97;
+        //     let key=4;
+        //     let s=t.split("");
+        //     let cy = [];
+        //     let k=0;
+        //     for(let i=0;i<26;i++)
+        //     {
+        //         a[i] = String.fromCharCode(j);
+        //         j++;
+        //     }
+        //     for(let i=0;i<s.length;i++)
+        //     {
+        //         for(j=0;j<26;j++)
+        //         {
+        //             if(s[i].toUpperCase()===a[j].toUpperCase())
+        //             {
+        //                 cy[k]=a[((j+key)%26)];
+        //                 k++;
+        //                 break;
+
+        //             }
+
+        //         }
+        //     }
+            for(let i=0;i<res.length;i++)
+            {
+                document.write(res[i]);
+            }
+
+        }
+    </script>
+</body>
+</html>

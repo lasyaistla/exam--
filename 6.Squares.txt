@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Square of Numbers</h3>
+    <button onclick="inputnum()">Click for entering the range for numbers</button></body>
+<script>
+    function inputnum() {
+        let l = prompt("Enter the limit")
+        let j, result
+        for (j = 1; j <= l; j++) {
+            result = j * j;
+            document.write("Square of " + j + " is " +
+                result)
+            document.write("</br>")
+        }
+    }
+</script>
+</body>
+
+</html>

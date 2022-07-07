@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>EVEN or ODD</h2>
+    <form>
+        <label>Enter Number to check if it is Even or Odd</label>
+        <input type="number" id="ip">
+        <input type="submit" onclick="evenodd()"></form>
+    <script>
+        function
+        evenodd() {
+            let num = document.getElementById("ip").value
+            if (num % 2 == 0) {
+                alert(num + " is an Even Number");
+            } else {
+                alert(num+ " is an Odd Number");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <p id="r"></p>
+</head>
+
+<body>
+   
+   <script>
+    let arr = prompt("Enter array elements with space as seperator").split(" ")
+    let sep = parseInt(prompt("Enter determined size"))
+    let i=0
+    var j=1
+    var s=sep
+    var r=""
+    let chunk = arr.splice(0,sep);
+    alert(chunk);
+    alert(arr);
+    // document.getElementById("r").innerHTML=r
+   </script>
+</body>
+
+</html>

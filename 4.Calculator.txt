@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Basic Calculator</h2>
+    <button onclick="calculate()">Click to Calculate</button>
+    <p id="res"></p>
+    <script>
+        function calculate() {
+            let num1 = prompt("Enter Number 1");
+            let num2 = prompt("Enter Number 2");
+            let result = 0;
+            let Operator = prompt("Enter Operator");
+            switch (Operator) {
+                case "+":
+                    result = parseInt(num1) + parseInt(num2);
+                    break;
+                case "-":
+                    result = parseInt(num1) - parseInt(num2);
+                    break;
+                case "*":
+                    result = parseInt(num1) * parseInt(num2);
+                    break;
+                case "/":
+                    result = parseInt(num1) / parseInt(num2);
+                    break;
+                default:
+                    alert("Enter Valid Operator")
+                    break;
+
+            }
+            document.getElementById("res").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>
